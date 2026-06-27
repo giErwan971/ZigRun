@@ -13,4 +13,5 @@ jobs:
       - name: Call Supabase Edge Function
         run: |
           curl -X POST "https://bsqlkdbvuodxombxfljp.supabase.co/functions/v1/clean-challenge" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
           -H "Content-Type: application/json"
