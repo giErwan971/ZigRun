@@ -1,4 +1,4 @@
-name: Clean Challenges Daily
+name: Upadte Daily Saved Rank
 
 on:
   schedule:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Call Supabase Edge Function
-      run: |
-        curl -X POST "https://<PROJECT_REF>.supabase.co/functions/v1/update-rank" \
-          -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
-          -H "Content-Type: application/json"
+        run: |
+          curl -X POST "https://<PROJECT_REF>.supabase.co/functions/v1/update-rank" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json"
