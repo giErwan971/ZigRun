@@ -1,0 +1,17 @@
+name: Clean Challenges Daily
+
+on:
+  schedule:
+    - cron: "0 2 * * *"  # 2h du matin UTC
+  workflow_dispatch: # permet de tester manuellement
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Supabase Edge Function
+      run: |
+        curl -X POST "https://<PROJECT_REF>.supabase.co/functions/v1/update-rank" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+          -H "Content-Type: application/json"
