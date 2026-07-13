@@ -1,0 +1,13 @@
+@media (prefers-color-scheme: light){
+:root{--text:#000;--bg:#fff;--primary:#00cb4a;--primaryAlt:#15853e;--box:#e8e8e8;--border:#c9c9c9;--sub:#8d8d8d;}
+}
+@media (prefers-color-scheme: dark){
+:root{--text:#FAFAFA;--bg:#0D0D0F;--primary:#22C55E;--primaryAlt:#073819;--box:#18181B;--border:#27272A;--sub:#71717A;}
+}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--primary);padding:2rem;text-align:center}
+nav a{margin:.5rem;color:var(--text);text-decoration:none;font-weight:700}
+main{max-width:900px;margin:auto;padding:2rem}
+.card{background:var(--box);border:1px solid var(--border);border-radius:12px;padding:1rem;margin:1rem 0}
+footer{text-align:center;color:var(--sub);padding:2rem}
+h1,h2{margin-top:0}
